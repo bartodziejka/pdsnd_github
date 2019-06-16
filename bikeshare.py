@@ -51,7 +51,7 @@ def get_filters():
         else:
             break
 
-    print('-'*60)
+    print('-'*80)
     print('You are about to see data for:\n'
           'city: {},\n'
           'month: {},\n'
@@ -72,7 +72,6 @@ def load_data(city, month, day_of_week):
     """
     df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
-    
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
@@ -99,7 +98,7 @@ def time_stats(df):
     print("The most popular hour is:", popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*80)
 
 
 def station_stats(df):
@@ -122,7 +121,7 @@ def station_stats(df):
     print("The most frequent combination of Start Station and End Station is:", popular_start_end)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*80)
 
 
 def trip_duration_stats(df):
@@ -144,7 +143,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*80)
 
 
 def user_stats(df):
@@ -181,7 +180,7 @@ def user_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*80)
 
 
 def display_raw_data(df):

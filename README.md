@@ -1,5 +1,5 @@
 ### Date created
-Include the date you created this project and README file.
+Project and README file created on June 16th 2019
 
 ### Explore US Bikeshare Data
 
